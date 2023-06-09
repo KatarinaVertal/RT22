@@ -18,6 +18,6 @@ public class MyCanvas extends JPanel {
     public void paintComponent(Graphics g){
         g.fillOval((int) (turtle.getX()-15), (int) (turtle.getY()-15), 30,30);
         g.setColor(Color.red);
-        g.fillOval((int) (turtle.getX()+10), (int) (turtle.getY()-5), 10,10);
+        g.fillOval((int) (turtle.getX()+10 * Math.cos(Math.toRadians(turtle.getRotation()))), (int) (turtle.getY()-10 * Math.cos(Math.toRadians(turtle.getRotation()))), 10,10);
     }
 }

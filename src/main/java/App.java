@@ -46,6 +46,8 @@ public class App {
         JLabel l1= new JLabel("Krok");
         JLabel l2= new JLabel("Farba");
 
+        logic.addLabels(l1,l2);
+
 
         sideMenu.setLayout(new GridLayout(2, 3));
         sideMenu.add(cb);
