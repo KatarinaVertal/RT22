@@ -12,10 +12,11 @@ public class App {
         frame.setResizable(false);
         frame.setFocusable(true);
 
-        GameLogic logic = new GameLogic(frame);
-        frame.addKeyListener(logic);
 
         MyCanvas canvas = new MyCanvas();
+
+        GameLogic logic = new GameLogic(frame,canvas);
+        frame.addKeyListener(logic);
 
         JPanel sideMenu = new JPanel();
         sideMenu.setBackground(Color.LIGHT_GRAY);

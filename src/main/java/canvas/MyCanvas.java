@@ -1,10 +1,13 @@
 package canvas;
 
+import lombok.Getter;
+import lombok.Setter;
 import shapes.Turtle;
 
 import javax.swing.*;
 import java.awt.*;
 
+@Getter @Setter
 public class MyCanvas extends JPanel {
     private Turtle turtle;
 

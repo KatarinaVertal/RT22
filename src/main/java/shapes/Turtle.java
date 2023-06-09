@@ -5,14 +5,19 @@ import lombok.Setter;
 
 @Getter @Setter
 public class Turtle {
-    private Integer x;
-    private Integer y;
-    private Integer rotation;
+    private int x;
+    private int y;
+    private int rotation;
+    private int length;
 
     public Turtle() {
         this.x = 400;
         this.y = 400;
         this.rotation = 0;
+        this.length = 10;
     }
 
+    public void move() {
+
+    }
 }
