@@ -19,20 +19,22 @@ public class GameLogic extends UniversalAdapter {
     @Override
     public void actionPerformed(ActionEvent e) {
         super.actionPerformed(e);
-        JComboBox cb = (JComboBox) e.getSource();
-        JButton b = (JButton) e.getSource();
         if (e.getSource() instanceof JComboBox){
+            JComboBox cb = (JComboBox) e.getSource();
             canvas.getTurtle().setRotation(Integer.parseInt((String.valueOf(cb.getItemAt(cb.getSelectedIndex())))));
         }
         else {
+            JButton b = (JButton) e.getSource();
             if(b.getText().equals("action")){
                 canvas.getTurtle().move();
-                paint();
+                //paint();
             }
             else{
 
             }
         }
+        canvas.repaint();
+
 
     }
 

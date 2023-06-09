@@ -5,8 +5,8 @@ import lombok.Setter;
 
 @Getter @Setter
 public class Turtle {
-    private int x;
-    private int y;
+    private double x;
+    private double y;
     private int rotation;
     private int length;
 
@@ -18,6 +18,8 @@ public class Turtle {
     }
 
     public void move() {
-
+        this.x = this.x + this.length * Math.cos(Math.toRadians(rotation));
+        this.y= this.y - this.length * Math.sin(Math.toRadians(rotation));
+        System.out.println(x);
     }
 }
